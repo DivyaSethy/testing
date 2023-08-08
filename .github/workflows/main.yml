@@ -6,9 +6,9 @@ name: testing
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: ${{ github.ref }}
+    branches: ${{ github.ref.name }}
   pull_request:
-    branches: ${{ github.ref }}
+    branches: ${{ github.ref.name }}
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
