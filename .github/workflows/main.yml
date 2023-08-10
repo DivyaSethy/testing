@@ -39,6 +39,3 @@ jobs:
     steps:
       - name: Trigger Child Workflow
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.WORKFLOW_SECRET }}
-          event-type: run-child-workflow
