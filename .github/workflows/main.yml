@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: testing
+name: Parent
 
 # Controls when the workflow will run
 on:
@@ -38,6 +38,7 @@ jobs:
 
     steps:
       - name: Trigger Child Workflow
-        uses: actions/checkout@v3
+        uses: peter-evans/repository-dispatch@v1
         with:
+          token: ${{ secrets.WORKFLOW_SECRET }}
           event-type: run-child-workflow
